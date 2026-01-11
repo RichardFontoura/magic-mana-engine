@@ -1,0 +1,6 @@
+node_modules/
+dist/
+package-lock.json
+
+magic-mana-engine/
+magic-mana-engine.zip

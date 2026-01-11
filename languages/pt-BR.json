@@ -1,0 +1,46 @@
+{
+  "magic-mana-engine": {
+    "title": "Mana",
+    "tab": "Mana",
+    "settings": {
+      "slotCount": {
+        "name": "Quantidade de Slots",
+        "hint": "Número de círculos por barra (1 a 10)."
+      },
+      "manaManager": {
+        "name": "Gerenciador de Mana",
+        "label": "Abrir Gerenciador de Mana",
+        "hint": "Abra o Gerenciador de Mana para configurar slots por ator e por categoria."
+      }
+    },
+    "gmLockBar": "Travar barra",
+    "gmUnlockBar": "Destravar barra",
+    "gmLocked": "Bloqueado pelo GM",
+    "gmOnly": "Apenas o GM pode realizar esta ação.",
+    "chat": {
+      "noActor": "Nenhum ator está associado ao jogador.",
+      "fail": "{player} tentou gastar mana com {card} ({color}) mas não possui o suficiente.",
+      "success": "{player} gastou {value} de mana com {card} ({color})."
+    },
+    "color": {
+      "W": "Branco",
+      "U": "Azul",
+      "B": "Preto",
+      "R": "Vermelho",
+      "G": "Verde",
+      "C": "Genérica",
+      "P": "Carga Planar"
+    },
+    "manager": {
+      "title": "Gerenciador de Mana",
+      "search": "Pesquisar Ator",
+      "searchPlaceholder": "Digite o nome do ator...",
+      "actor": "Ator",
+      "slotsByCategory": "Slots por Categoria",
+      "save": "Salvar",
+      "noActorFound": "Nenhum ator encontrado com o filtro atual.",
+      "selectActor": "Selecione um Ator.",
+      "saveSuccess": "Configuração salva."
+    }
+  }
+}

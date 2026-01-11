@@ -1,0 +1,48 @@
+{
+  "id": "magic-mana-engine",
+  "title": "Magic Mana Engine",
+  "description": "Integrates Magic: The Gathering mana system into Foundry VTT",
+  "version": "1.0.0",
+  "socket": true,
+  "authors": [
+    {
+      "name": "LoboWerewolf",
+      "url": "https://www.patreon.com/cw/LoboWerewolf"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json",
+        "compatibility": {
+          "minimum": "7.8.0",
+          "verified": "7.8.0"
+        }
+      }
+    ],
+    "requires": []
+  },
+  "esmodules": ["main.js"],
+  "styles": ["styles/mana.viewer.css", "styles/mana.manager.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "languages/pt-BR.json"
+    }
+  ],
+  "url": "https://github.com/RichardFontoura/magic-mana-engine",
+  "manifest": "https://github.com/RichardFontoura/magic-mana-engine/releases/download/1.0.0/module.json",
+  "download": "https://github.com/RichardFontoura/magic-mana-engine/releases/download/1.0.0/magic-mana-engine.zip"
+}

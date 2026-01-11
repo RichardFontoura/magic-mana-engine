@@ -1,0 +1,46 @@
+{
+  "magic-mana-engine": {
+    "title": "Mana",
+    "tab": "Mana",
+    "settings": {
+      "slotCount": {
+        "name": "Slot Count",
+        "hint": "Number of circles per bar (1 to 10)."
+      },
+      "manaManager": {
+        "name": "Mana Manager",
+        "label": "Open Mana Manager",
+        "hint": "Open the Mana Manager to configure slots per actor and category."
+      }
+    },
+    "gmLockBar": "Lock bar",
+    "gmUnlockBar": "Unlock bar",
+    "gmLocked": "Locked by GM",
+    "gmOnly": "Only the GM can perform this action.",
+    "chat": {
+      "noActor": "No actor is associated with the player.",
+      "fail": "{player} tried to spend mana with {card} ({color}) but doesn't have enough.",
+      "success": "{player} spent {value} mana with {card} ({color})."
+    },
+    "color": {
+      "W": "White",
+      "U": "Blue",
+      "B": "Black",
+      "R": "Red",
+      "G": "Green",
+      "C": "Generic",
+      "P": "Planar Charge"
+    },
+    "manager": {
+      "title": "Mana Manager",
+      "search": "Search Actor",
+      "searchPlaceholder": "Type the actor name...",
+      "actor": "Actor",
+      "slotsByCategory": "Slots by Category",
+      "save": "Save",
+      "noActorFound": "No actor found with the current filter.",
+      "selectActor": "Select an Actor.",
+      "saveSuccess": "Configuration saved."
+    }
+  }
+}

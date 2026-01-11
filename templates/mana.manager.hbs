@@ -1,0 +1,41 @@
+<div class="mana-manager-body">
+  {{#if isGM}}
+  <div class="row" style="margin-bottom: 8px;">
+    <label>{{localize "magic-mana-engine.manager.search"}}</label>
+    <input type="text" name="search" value="{{search}}" placeholder="{{localize "magic-mana-engine.manager.searchPlaceholder"}}" />
+  </div>
+
+  <div class="row" style="margin-bottom: 12px;">
+    <label>{{localize "magic-mana-engine.manager.actor"}}</label>
+    <select name="actor">
+      <option value="" {{#unless selectedActorId}}selected{{/unless}}>Selecione um ator</option>
+      {{#each actors}}
+      <option value="{{this.id}}" {{#if (eq ../selectedActorId this.id)}}selected{{/if}}>{{this.name}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  {{#if slotConfig}}
+  <fieldset style="border: 1px solid #666; padding: 8px;">
+    <legend>{{localize "magic-mana-engine.manager.slotsByCategory"}}</legend>
+    {{#each colors}}
+    <div class="row" style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+      <label style="width:80px;">{{this.name}}</label>
+      <input class="mana-range" type="range" min="0" max="100" step="1" data-color="{{this.key}}"
+        value="{{lookup ../slotConfig this.key}}" />
+      <input class="mana-input" type="number" min="0" max="100" step="1" data-color="{{this.key}}"
+        value="{{lookup ../slotConfig this.key}}" />
+    </div>
+    {{/each}}
+  </fieldset>
+  <div class="mana-actions">
+    <button type="button" class="mana-save"><i class="fas fa-save"></i> {{localize
+      "magic-mana-engine.manager.save"}}</button>
+  </div>
+  {{else}}
+  <p>{{localize "magic-mana-engine.manager.noActorFound"}}</p>
+  {{/if}}
+  {{else}}
+  <p>{{localize "magic-mana-engine.gmOnly"}}</p>
+  {{/if}}
+</div>

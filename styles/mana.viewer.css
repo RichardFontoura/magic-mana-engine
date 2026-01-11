@@ -1,0 +1,105 @@
+.wmp-mana {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wmp-bar {
+  border-radius: 8px;
+  padding: 8px;
+  position: relative;
+}
+.wmp-bar .wmp-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.wmp-bar .wmp-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.wmp-lock {
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.wmp-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wmp-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.wmp-slot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--wmp-color, #888);
+  position: relative;
+  background: rgba(0, 0, 0, 0.15);
+}
+.wmp-slot.active {
+  background: rgba(255, 255, 255, 0.08);
+}
+.wmp-slot.locked {
+  filter: grayscale(1) opacity(0.6);
+}
+.wmp-slot .icon {
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.wmp-bar.locked::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  pointer-events: none;
+}
+.wmp-note {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.wmp-section {
+  margin-top: 16px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.wmp-section > h3 {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.9;
+}
+.tab.wmp-mana {
+  display: none;
+}
+.tab.wmp-mana.active {
+  display: block;
+}
+
+.tab.wmp-mana {
+  height: 100%;
+  overflow: hidden;
+}
+.tab.wmp-mana .wmp-mana {
+  max-height: 100%;
+  overflow-y: auto;
+}
