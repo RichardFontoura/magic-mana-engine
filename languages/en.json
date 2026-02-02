@@ -11,6 +11,11 @@
         "name": "Mana Manager",
         "label": "Open Mana Manager",
         "hint": "Open the Mana Manager to configure slots per actor and category."
+      },
+      "manaImageConfig": {
+        "name": "Mana Images",
+        "label": "Configure Images",
+        "hint": "Configure the images for each mana color."
       }
     },
     "gmLockBar": "Lock bar",
@@ -41,6 +46,17 @@
       "noActorFound": "No actor found with the current filter.",
       "selectActor": "Select an Actor.",
       "saveSuccess": "Configuration saved."
+    },
+    "imageConfig": {
+      "title": "Mana Image Configuration",
+      "description": "Configure the image for each mana color. Leave empty to use a solid color background instead.",
+      "pathPlaceholder": "No image selected",
+      "noImage": "No Image",
+      "browse": "Browse Files",
+      "clear": "Clear Image",
+      "save": "Save Configuration",
+      "saveSuccess": "Image configuration saved successfully.",
+      "filePickerError": "Failed to open file picker. See console for details."
     }
   }
 }

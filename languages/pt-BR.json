@@ -11,6 +11,11 @@
         "name": "Gerenciador de Mana",
         "label": "Abrir Gerenciador de Mana",
         "hint": "Abra o Gerenciador de Mana para configurar slots por ator e por categoria."
+      },
+      "manaImageConfig": {
+        "name": "Imagens de Mana",
+        "label": "Configurar Imagens",
+        "hint": "Configure as imagens para cada cor de mana."
       }
     },
     "gmLockBar": "Travar barra",
@@ -41,6 +46,17 @@
       "noActorFound": "Nenhum ator encontrado com o filtro atual.",
       "selectActor": "Selecione um Ator.",
       "saveSuccess": "Configuração salva."
+    },
+    "imageConfig": {
+      "title": "Configuração de Imagens de Mana",
+      "description": "Configure a imagem para cada cor de mana. Deixe em branco para usar uma cor sólida no lugar.",
+      "pathPlaceholder": "Nenhuma imagem selecionada",
+      "noImage": "Sem Imagem",
+      "browse": "Procurar Arquivos",
+      "clear": "Limpar Imagem",
+      "save": "Salvar Configuração",
+      "saveSuccess": "Configuração de imagens salva com sucesso.",
+      "filePickerError": "Falha ao abrir o seletor de arquivos. Veja o console para detalhes."
     }
   }
 }

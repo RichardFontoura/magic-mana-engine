@@ -70,16 +70,11 @@ export function registerHooks(storage) {
 
     const $container = body.find(".tab.wmp-mana .wmp-mana");
 
-    const basePath = `modules/${MODULE_ID}`;
-    const icons = {
-      W: `${basePath}/assets/W.webp`,
-      U: `${basePath}/assets/U.jpg`,
-      B: `${basePath}/assets/B.jpg`,
-      R: `${basePath}/assets/R.jpg`,
-      G: `${basePath}/assets/G.jpg`,
-      C: `${basePath}/assets/C.webp`,
-      P: `${basePath}/assets/P.png`,
-    };
+    const icons = {};
+    for (const color of ["W", "U", "B", "R", "G", "C", "P"]) {
+      const settingKey = `manaImage${color}`;
+      icons[color] = game.settings.get(MODULE_ID, settingKey) || "";
+    }
 
     const slotCountByColor = storage.getActorSlotConfig(actor);
 
@@ -186,16 +181,11 @@ export function registerHooks(storage) {
         const $container = htmlEl.find(".tab.wmp-mana .wmp-mana");
         if (!$container.length) continue;
 
-        const basePath = `modules/${MODULE_ID}`;
-        const icons = {
-          W: `${basePath}/assets/W.webp`,
-          U: `${basePath}/assets/U.jpg`,
-          B: `${basePath}/assets/B.jpg`,
-          R: `${basePath}/assets/R.jpg`,
-          G: `${basePath}/assets/G.jpg`,
-          C: `${basePath}/assets/C.webp`,
-          P: `${basePath}/assets/P.png`,
-        };
+        const icons = {};
+        for (const color of ["W", "U", "B", "R", "G", "C", "P"]) {
+          const settingKey = `manaImage${color}`;
+          icons[color] = game.settings.get(MODULE_ID, settingKey) || "";
+        }
 
         const slotCountByColor = storage.getActorSlotConfig(actor);
 

@@ -29,7 +29,7 @@
     "requires": []
   },
   "esmodules": ["main.js"],
-  "styles": ["styles/mana.viewer.css", "styles/mana.manager.css"],
+  "styles": ["styles/mana.viewer.css", "styles/mana.manager.css", "styles/mana.image-config.css"],
   "languages": [
     {
       "lang": "en",

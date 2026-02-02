@@ -1,0 +1,60 @@
+<div class="mana-image-config-content">
+  <div class="config-header">
+    <p class="hint">{{localize "magic-mana-engine.imageConfig.description"}}</p>
+  </div>
+
+  <div class="colors-grid">
+    {{#each colors}}
+      <div class="color-card">
+        <div class="card-header">
+          <span class="color-badge mana-{{this.key}}">{{this.key}}</span>
+          <span class="color-name">{{this.name}}</span>
+        </div>
+
+        <div class="card-body">
+          {{#if this.image}}
+            <div class="image-preview">
+              <img src="{{this.image}}" alt="{{this.name}}" />
+              <button
+                type="button"
+                class="clear-image-overlay"
+                data-color="{{this.key}}"
+                title="{{localize "magic-mana-engine.imageConfig.clear"}}">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          {{else}}
+            <div class="no-image-placeholder">
+              <i class="fas fa-image"></i>
+              <span>{{localize "magic-mana-engine.imageConfig.noImage"}}</span>
+            </div>
+          {{/if}}
+
+          <div class="card-actions">
+            <input
+              type="text"
+              name="image-{{this.key}}"
+              value="{{this.image}}"
+              placeholder="{{localize "magic-mana-engine.imageConfig.pathPlaceholder"}}"
+              class="image-path-input"
+            />
+            <button
+              type="button"
+              class="file-picker-btn"
+              data-color="{{this.key}}"
+              title="{{localize "magic-mana-engine.imageConfig.browse"}}">
+              <i class="fas fa-folder-open"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+  <footer class="form-footer">
+    <button type="button" class="save-btn" data-action="save">
+      <i class="fas fa-check"></i>
+      <span>{{localize "magic-mana-engine.imageConfig.save"}}</span>
+    </button>
+  </footer>
+</div>

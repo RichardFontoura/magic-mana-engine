@@ -1,0 +1,300 @@
+.mana-image-config {
+  min-width: 700px;
+  max-width: 900px;
+}
+
+.application.mana-image-config .window-content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.mana-image-config-content {
+  padding: 0;
+  background: var(--color-bg-option, #1a1a1a);
+}
+
+.config-header {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(100, 50, 150, 0.15), rgba(50, 100, 200, 0.15));
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.config-header .hint {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.colors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1.5rem;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.color-card {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.color-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.color-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 14px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.color-badge.mana-W {
+  background: linear-gradient(135deg, #f8f4e0, #fff);
+  color: #333;
+}
+
+.color-badge.mana-U {
+  background: linear-gradient(135deg, #2986cc, #4da6ff);
+  color: #fff;
+}
+
+.color-badge.mana-B {
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  color: #fff;
+  border: 1px solid #666;
+}
+
+.color-badge.mana-R {
+  background: linear-gradient(135deg, #cc0000, #ff3333);
+  color: #fff;
+}
+
+.color-badge.mana-G {
+  background: linear-gradient(135deg, #38761d, #4da64d);
+  color: #fff;
+}
+
+.color-badge.mana-C {
+  background: linear-gradient(135deg, #6b7280, #9ca3af);
+  color: #fff;
+}
+
+.color-badge.mana-P {
+  background: linear-gradient(135deg, #5b21b6, #7c3aed);
+  color: #fff;
+}
+
+.color-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  flex: 1;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.image-preview {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.clear-image-overlay {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 28px;
+  height: 28px;
+  background: rgba(220, 38, 38, 0.9);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-size: 12px;
+}
+
+.image-preview:hover .clear-image-overlay {
+  opacity: 1;
+}
+
+.clear-image-overlay:hover {
+  background: rgb(220, 38, 38);
+  transform: scale(1.1);
+}
+
+.no-image-placeholder {
+  width: 100%;
+  height: 120px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 2px dashed rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.no-image-placeholder i {
+  font-size: 32px;
+}
+
+.no-image-placeholder span {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.image-path-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.image-path-input:focus {
+  outline: none;
+  border-color: rgba(100, 150, 255, 0.6);
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 2px rgba(100, 150, 255, 0.2);
+}
+
+.image-path-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 11px;
+}
+
+.file-picker-btn {
+  padding: 0.5rem 0.75rem;
+  background: linear-gradient(135deg, rgba(100, 150, 255, 0.8), rgba(80, 120, 220, 0.8));
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+}
+
+.file-picker-btn:hover {
+  background: linear-gradient(135deg, rgb(100, 150, 255), rgb(80, 120, 220));
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(100, 150, 255, 0.4);
+}
+
+.file-picker-btn i {
+  font-size: 14px;
+}
+
+.form-footer {
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+}
+
+.save-btn {
+  padding: 0.75rem 2.5rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.save-btn:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.5);
+}
+
+.save-btn:active {
+  transform: translateY(0);
+}
+
+.save-btn i {
+  font-size: 18px;
+}
+
+/* Scrollbar customization */
+.colors-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.colors-grid::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.colors-grid::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.colors-grid::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
